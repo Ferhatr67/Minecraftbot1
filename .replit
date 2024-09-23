@@ -1,0 +1,65 @@
+entrypoint = "index.js"
+modules = ["nodejs-20:v8-20230920-bd784b9"]
+hidden = [".config", "package-lock.json"]
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix", "package.json", "package-lock.json"]
+
+[nix]
+channel = "stable-23_05"
+
+[unitTest]
+language = "nodejs"
+
+[deployment]
+run = ["node", "index.js"]
+deploymentTarget = "cloudrun"
+ignorePorts = false
+
+[[ports]]
+localPort = 3000
+externalPort = 3001
+
+[[ports]]
+localPort = 3007
+externalPort = 80
+
+[[ports]]
+localPort = 35373
+externalPort = 3002
+
+[[ports]]
+localPort = 36023
+externalPort = 6000
+
+[[ports]]
+localPort = 36805
+externalPort = 8000
+
+[[ports]]
+localPort = 38455
+externalPort = 4200
+
+[[ports]]
+localPort = 38971
+externalPort = 3000
+
+[[ports]]
+localPort = 39001
+externalPort = 6800
+
+[[ports]]
+localPort = 39867
+externalPort = 5000
+
+[[ports]]
+localPort = 40199
+externalPort = 3003
+
+[[ports]]
+localPort = 40321
+externalPort = 5173
+
+[[ports]]
+localPort = 43851
+externalPort = 8008
